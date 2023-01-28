@@ -2,20 +2,13 @@
 int main() {
 	int a;
 	int count=0;
-	int j=1;
-	int sum=0;
-	
 	scanf("%d", &a);
-	
 	for(int i=1;i<=a;i++){
-		for(j=1;j<=i;j=j*10){
-			count++;
-		}
-		j=1;
-		sum=sum+count;
 		count=0;
+		for(int j=1;j<=i;j++){
+			if(i%j==0) count++;
+		}
+		printf("%d ", count);
 	}
-	printf("%d",sum);
 	return 0;
 }
-
